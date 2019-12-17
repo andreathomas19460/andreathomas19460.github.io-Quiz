@@ -1,3 +1,19 @@
+body{
+    background-image: url("assets/diagonal-squares.png");
+}
+a{
+    color: rgb(252, 151, 252);
+    font-weight: bold;
+    font-size: 25px;
+}
+    a:hover{
+        color: orange;
+    }
+h1{
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+}
 .main{
     display: flex;
     flex-wrap: wrap;
@@ -6,21 +22,39 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     width: 700px;
     margin: auto;
-    height: 600px;
+    height: 95%;
     text-align: center;
     line-height: 40px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+#time{
+    color: white;
+    font-size: 50px;
+}
+
+p{
+    color: white;
+    font-size: 25px;
+    margin: 0;
+    padding-bottom: 25px;
 }
 
 button {
     display: flex;
     justify-content: center;
-    font-size: 24px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     cursor: pointer;
     text-align: center;
     color:black;
     background-color: orange;
-    border-radius: 10%;
+    border-radius: 5%;
     box-shadow: 0 9px #999;
+    margin-bottom: 40px;
   }
     
     button:hover {
