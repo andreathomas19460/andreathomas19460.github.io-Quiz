@@ -60,14 +60,14 @@ var questions = [
       answer: "Verity"
     },
     {
-      title: "What Quidditch team did Oliver Wood go on to play for after leaving Hogwarts?",
-      choices: ["The Chudley Cannons", "Puddlemere United", "The Wimbourne Wasps", "The Holyhead Harpies"],
-      answer: "Puddlemere United"
+      title: "Who is the driver of the Knight Bus?",
+      choices: ["Stan Shunpike", "Ted Tonks", "Frank Bryce", "Ernie Prang"],
+      answer: "Ernie Prang"
     },
     {
-      title: "What Quidditch team did Oliver Wood go on to play for after leaving Hogwarts?",
-      choices: ["The Chudley Cannons", "Puddlemere United", "The Wimbourne Wasps", "The Holyhead Harpies"],
-      answer: "Puddlemere United"
+      title: "What does N.E.W.T. stand for?",
+      choices: ["Nastily Exhausting Wizarding Test", "Never Ebbing Wizarding Time", "Newly Elected Wizarding Teacher", "Necessary Experimental Wand Testing"],
+      answer: "Nastily Exhausting Wizarding Test"
     },
     {
       title: "Who marries Fleur?",
