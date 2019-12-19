@@ -1,3 +1,41 @@
+header{
+    font-size: 25px;
+}
+
 body{
     background-image: url("assets/embossed-diamond.png");
 }
+.main {
+    display: block;
+    margin: auto;
+    width: 50%;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    width: 700px;
+    margin: auto;
+    height: 95%;
+    text-align: center;
+    line-height: 40px;
+  }
+  button {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    cursor: pointer;
+    text-align: center;
+    color: black;
+    background-color: orange;
+    border-radius: 5%;
+    box-shadow: 0 2px #999;
+    margin-bottom: 40px;
+  }
+  
+  button:hover {
+    background-color: rgb(196, 135, 21);
+  }
+
+  #playAgain{
+    position: relative;
+  }
+  #clearScores{
+    position: relative;
+  }

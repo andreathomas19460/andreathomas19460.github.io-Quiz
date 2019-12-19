@@ -46,6 +46,7 @@ header {
   color: white;
   font-size: 40px;
   text-align: left;
+  cursor: pointer;
 }
 .qDiv{
   display: block;
@@ -86,7 +87,7 @@ button {
   color: black;
   background-color: orange;
   border-radius: 5%;
-  box-shadow: 0 9px #999;
+  box-shadow: 0 2px #999;
   margin-bottom: 40px;
 }
 
@@ -98,4 +99,19 @@ button:active {
   background-color: darkgoldenrod;
   box-shadow: 5px lightslategray;
   transform: translateY(4px);
+}
+
+.score {
+  margin-top: 100px;
+  font-weight: bold;
+  font-size: 100px;
+  color: rgb(235, 124, 235);
+  line-height: 75px;
+  margin-bottom: 50px;
+}
+
+.textarea {
+  width: 300px;
+  font-size: 25px;
+  height: 70px;
 }
