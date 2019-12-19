@@ -1,19 +1,3 @@
-// var questions = [];
-
-
-
-// $("#time").on("click", function(){
-// var count = 15;
-// var interval = setInterval(function(){
-//   document.getElementById('time').innerHTML=count;
-//   count--;
-//   if (count === 0){
-//     alert("You're out of Horcruxes!");
-//     clearInterval(interval);
-
-//   }
-// }, 1000);
-// });
 
 var timeSpan = document.getElementById('time');
 function updateTime(time) {
@@ -39,15 +23,15 @@ var previousAnswerCorrect;
 function askQuestion() {
   var question = questions[questionsAnswered];
   var html = '';
-  html += `<p class="question">${question.title}</p><ul>`;
+  html += `<div class="qDiv"><p class="question">${question.title}</p><ul class="choiceList">`;
   question.choices.forEach(function(choice) {
     html += `<li class="choice" onclick="answer(${choice === question.answer})">${choice}</li>`;
   });
-  html += `</ul>`;
+  html += `</ul></div>`;
   if (previousAnswerCorrect === true) {
-    html += `<p>Correct!</p>`
+    html += `<p class="correct">Correct! Very witty.</p>`
   } else if (previousAnswerCorrect === false) {
-    html += `<p>Wrong! 15 points from Gryffindor.</p>`
+    html += `<p class="incorrect">Wrong! 15 points from Gryffindor.</p>`
   }
   mainDiv.innerHTML = html;
 }
@@ -93,18 +77,7 @@ function answer(correct) {
     endQuiz();
   }
 }
-// for (var i = 0; i < questions.length; i++) {
-//     var score = 0;
-//     var title = window.body(questions[i].title);
-//     var choices = window.body(questions[i].choices);
-//     if (answer == questions[i].answer){
-//         score ++;
-//         alert("Very witty!");
-//     } else counter -= 15;
-//       alert("15 points from Gryffindor!");
 
-//     }
-//     alert("You've earned " + score + " points for Gryffindor!");
 
 
 

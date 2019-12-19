@@ -35,10 +35,37 @@ header {
   font-size: 50px;
 }
 .question {
-
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: orange;
+  font-weight:bold;
+  font-size: 50px;
+  text-align: center;
+  line-height: 75px;
 }
 .choice {
   color: white;
+  font-size: 40px;
+  text-align: left;
+}
+.qDiv{
+  display: block;
+  position: static;
+}
+
+.choiceList {
+  position: relative;
+  line-height: 75px;
+}
+.correct {
+  position: relative;
+  font-size: 50px;
+  color: hotpink;
+}
+.incorrect {
+  position: relative;
+  font-size: 50px;
+  color: rgb(144, 207, 48);
+  line-height: 75px;
 }
 
 p {
