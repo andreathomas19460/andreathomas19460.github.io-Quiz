@@ -1,5 +1,3 @@
-/** @format */
-
 var timeSpan = document.getElementById("time");
 function updateTime(time) {
   timeSpan.innerHTML = time;
@@ -52,11 +50,27 @@ function beginQuiz() {
 function endQuiz() {
   clearInterval(everySecondIntervalId);
   var score = Math.round((correctAnswers / questions.length) * 100);
-  var html = "";
-  html += `<p class="score">You scored ${score} percent.</p><input type="text" name="initials" class="textarea" value="Add your initials..."><button onclick="window.location.href='scores.html';">Log Score</button>`;
-  mainDiv.innerHTML = html;
+  var highScores = localStorage.getItem('highScores') || [];
+  if (highScores.length < 5) {
+    var html = "";
+    html += `<p class="score">You scored ${score} percent.</p><input type="text" id="initials" name="initials" class="textarea" value="Add your initials..."><button id="logScore" onclick="<a id="scoresLink" href="scores.html">Log Score</button>`;
+    mainDiv.innerHTML = html;
+    document.getElementById("logScore").addEventListener("click",
+      function () {
+        var record = {
+          initials: document.getElementById("initials").value,
+          score: score
+        };
+        localStorage.setItem("highScores", record) ;
+        console.log(record);
+    });
+  // } else {
+  //   var html = "";
+  //   html += `<p class="score">You scored ${score} precent...unimpressive.</p><button id="navButton"><a id="scoresLink" href="scores.html">See Highscores</a></button>`;
+  //   mainDiv.innerHTML = html;
+  // }
 }
-
+ 
 
 function everySecond() {
   secondsRemaining -= 1;
@@ -77,4 +91,16 @@ function answer(correct) {
   } else {
     endQuiz();
   }
+}
+
+var score = 0;
+var highscore = localStorage.getItem("highscore");
+
+if(highscore !== null){
+    if (score > highscore) {
+        localStorage.setItem("highscore", score);      
+    }
+}
+else{
+    localStorage.setItem("highscore", score);
 }
